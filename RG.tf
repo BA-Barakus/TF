@@ -17,4 +17,5 @@ resource "azurerm_resource_group" "RG" {
 count =10 #This value will create 10 RG
 name = "Student-${count.index}"
 location = "West Europe"
+
 }
