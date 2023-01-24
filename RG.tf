@@ -9,7 +9,7 @@ terraform {
 provider "azurerm" {
   # Configuration options
   features {}
-  subscription_id = "PUT-YOUR_SUB-ID"
+  subscription_id = var.tenant_id
 }
 
 
@@ -17,5 +17,5 @@ resource "azurerm_resource_group" "RG" {
 count =10 #This value will create 10 RG
 name = "Student-${count.index}"
 location = "West Europe"
-desription = "test"
+# desription = "test"
 }
